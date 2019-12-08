@@ -29,7 +29,7 @@
 		AEC9C707239CBDCE00EB7B7D /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C706239CBDCE00EB7B7D /* grass.jpg */; };
 		AEC9C709239CBDEA00EB7B7D /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C708239CBDEA00EB7B7D /* CDHelper.swift */; };
 		AEC9C70C239CBED300EB7B7D /* Pack_Go.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C70A239CBED300EB7B7D /* Pack_Go.xcdatamodeld */; };
-		AEC9C70E239CC0B600EB7B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C70D239CC0B600EB7B7D /* AppDelegate.swift */; };
+		AEC9C712239CC49D00EB7B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C711239CC49D00EB7B7D /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +102,7 @@
 		AEC9C706239CBDCE00EB7B7D /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
 		AEC9C708239CBDEA00EB7B7D /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
 		AEC9C70B239CBED300EB7B7D /* Pack_Go.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pack_Go.xcdatamodel; sourceTree = "<group>"; };
-		AEC9C70D239CC0B600EB7B7D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../../../Pack-Go/Pack-Go/Classes/AppDelegate.swift"; sourceTree = "<group>"; };
+		AEC9C711239CC49D00EB7B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,10 +186,10 @@
 		AEC9C6F0239CBC7800EB7B7D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AEC9C70D239CC0B600EB7B7D /* AppDelegate.swift */,
 				AEC9C708239CBDEA00EB7B7D /* CDHelper.swift */,
 				AEC9C6F9239CBCCC00EB7B7D /* BattleScene.swift */,
 				AEC9C6F8239CBCCC00EB7B7D /* CustomAnnotation.swift */,
+				AEC9C711239CC49D00EB7B7D /* AppDelegate.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -359,7 +359,7 @@
 				AEC9C70C239CBED300EB7B7D /* Pack_Go.xcdatamodeld in Sources */,
 				AEC9C709239CBDEA00EB7B7D /* CDHelper.swift in Sources */,
 				AEC9C703239CBCFD00EB7B7D /* ViewController.swift in Sources */,
-				AEC9C70E239CC0B600EB7B7D /* AppDelegate.swift in Sources */,
+				AEC9C712239CC49D00EB7B7D /* AppDelegate.swift in Sources */,
 				AEC9C705239CBCFD00EB7B7D /* MapKitViewController.swift in Sources */,
 				AEC9C6FC239CBCCC00EB7B7D /* BattleScene.swift in Sources */,
 				AEC9C6FB239CBCCC00EB7B7D /* CustomAnnotation.swift in Sources */,
