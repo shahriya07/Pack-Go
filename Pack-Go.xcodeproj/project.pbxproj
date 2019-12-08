@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AEC9C6B7239CBC5A00EB7B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C6B6239CBC5A00EB7B7D /* AppDelegate.swift */; };
-		AEC9C6B9239CBC5A00EB7B7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C6B8239CBC5A00EB7B7D /* ViewController.swift */; };
 		AEC9C6BC239CBC5A00EB7B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BA239CBC5A00EB7B7D /* Main.storyboard */; };
 		AEC9C6BE239CBC5D00EB7B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BD239CBC5D00EB7B7D /* Assets.xcassets */; };
 		AEC9C6C1239CBC5D00EB7B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BF239CBC5D00EB7B7D /* LaunchScreen.storyboard */; };
@@ -20,6 +18,18 @@
 		AEC9C6DC239CBC5E00EB7B7D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C6DB239CBC5E00EB7B7D /* ExtensionDelegate.swift */; };
 		AEC9C6DE239CBC5E00EB7B7D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C6DD239CBC5E00EB7B7D /* NotificationController.swift */; };
 		AEC9C6E0239CBC5F00EB7B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6DF239CBC5F00EB7B7D /* Assets.xcassets */; };
+		AEC9C6F5239CBCA300EB7B7D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC9C6F4239CBCA300EB7B7D /* MapKit.framework */; };
+		AEC9C6F7239CBCAA00EB7B7D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC9C6F6239CBCAA00EB7B7D /* CoreData.framework */; };
+		AEC9C6FB239CBCCC00EB7B7D /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C6F8239CBCCC00EB7B7D /* CustomAnnotation.swift */; };
+		AEC9C6FC239CBCCC00EB7B7D /* BattleScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C6F9239CBCCC00EB7B7D /* BattleScene.swift */; };
+		AEC9C702239CBCFD00EB7B7D /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C6FE239CBCFD00EB7B7D /* BattleViewController.swift */; };
+		AEC9C703239CBCFD00EB7B7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C6FF239CBCFD00EB7B7D /* ViewController.swift */; };
+		AEC9C704239CBCFD00EB7B7D /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C700239CBCFD00EB7B7D /* PokedexViewController.swift */; };
+		AEC9C705239CBCFD00EB7B7D /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C701239CBCFD00EB7B7D /* MapKitViewController.swift */; };
+		AEC9C707239CBDCE00EB7B7D /* grass.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C706239CBDCE00EB7B7D /* grass.jpg */; };
+		AEC9C709239CBDEA00EB7B7D /* CDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C708239CBDEA00EB7B7D /* CDHelper.swift */; };
+		AEC9C70C239CBED300EB7B7D /* Pack_Go.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C70A239CBED300EB7B7D /* Pack_Go.xcdatamodeld */; };
+		AEC9C70E239CC0B600EB7B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC9C70D239CC0B600EB7B7D /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +76,6 @@
 
 /* Begin PBXFileReference section */
 		AEC9C6B3239CBC5A00EB7B7D /* Pack-Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pack-Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEC9C6B6239CBC5A00EB7B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AEC9C6B8239CBC5A00EB7B7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AEC9C6BB239CBC5A00EB7B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEC9C6BD239CBC5D00EB7B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEC9C6C0239CBC5D00EB7B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,6 +91,18 @@
 		AEC9C6DF239CBC5F00EB7B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEC9C6E1239CBC5F00EB7B7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEC9C6E2239CBC5F00EB7B7D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		AEC9C6F4239CBCA300EB7B7D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AEC9C6F6239CBCAA00EB7B7D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AEC9C6F8239CBCCC00EB7B7D /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		AEC9C6F9239CBCCC00EB7B7D /* BattleScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleScene.swift; sourceTree = "<group>"; };
+		AEC9C6FE239CBCFD00EB7B7D /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
+		AEC9C6FF239CBCFD00EB7B7D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEC9C700239CBCFD00EB7B7D /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		AEC9C701239CBCFD00EB7B7D /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		AEC9C706239CBDCE00EB7B7D /* grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grass.jpg; sourceTree = "<group>"; };
+		AEC9C708239CBDEA00EB7B7D /* CDHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDHelper.swift; sourceTree = "<group>"; };
+		AEC9C70B239CBED300EB7B7D /* Pack_Go.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pack_Go.xcdatamodel; sourceTree = "<group>"; };
+		AEC9C70D239CC0B600EB7B7D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../../../../Pack-Go/Pack-Go/Classes/AppDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC9C6F7239CBCAA00EB7B7D /* CoreData.framework in Frameworks */,
+				AEC9C6F5239CBCA300EB7B7D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +132,7 @@
 				AEC9C6C9239CBC5D00EB7B7D /* Pack-Go WatchKit App */,
 				AEC9C6D8239CBC5E00EB7B7D /* Pack-Go WatchKit Extension */,
 				AEC9C6B4239CBC5A00EB7B7D /* Products */,
+				AEC9C6F3239CBCA300EB7B7D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,12 +149,13 @@
 		AEC9C6B5239CBC5A00EB7B7D /* Pack-Go */ = {
 			isa = PBXGroup;
 			children = (
-				AEC9C6B6239CBC5A00EB7B7D /* AppDelegate.swift */,
-				AEC9C6B8239CBC5A00EB7B7D /* ViewController.swift */,
-				AEC9C6BA239CBC5A00EB7B7D /* Main.storyboard */,
+				AEC9C706239CBDCE00EB7B7D /* grass.jpg */,
+				AEC9C6F2239CBC8800EB7B7D /* View Controllers */,
+				AEC9C6F1239CBC8200EB7B7D /* Storyboards */,
+				AEC9C6F0239CBC7800EB7B7D /* Classes */,
 				AEC9C6BD239CBC5D00EB7B7D /* Assets.xcassets */,
-				AEC9C6BF239CBC5D00EB7B7D /* LaunchScreen.storyboard */,
 				AEC9C6C2239CBC5D00EB7B7D /* Info.plist */,
+				AEC9C70A239CBED300EB7B7D /* Pack_Go.xcdatamodeld */,
 			);
 			path = "Pack-Go";
 			sourceTree = "<group>";
@@ -157,6 +181,46 @@
 				AEC9C6E2239CBC5F00EB7B7D /* PushNotificationPayload.apns */,
 			);
 			path = "Pack-Go WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		AEC9C6F0239CBC7800EB7B7D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AEC9C70D239CC0B600EB7B7D /* AppDelegate.swift */,
+				AEC9C708239CBDEA00EB7B7D /* CDHelper.swift */,
+				AEC9C6F9239CBCCC00EB7B7D /* BattleScene.swift */,
+				AEC9C6F8239CBCCC00EB7B7D /* CustomAnnotation.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AEC9C6F1239CBC8200EB7B7D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AEC9C6BA239CBC5A00EB7B7D /* Main.storyboard */,
+				AEC9C6BF239CBC5D00EB7B7D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AEC9C6F2239CBC8800EB7B7D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEC9C6FE239CBCFD00EB7B7D /* BattleViewController.swift */,
+				AEC9C701239CBCFD00EB7B7D /* MapKitViewController.swift */,
+				AEC9C700239CBCFD00EB7B7D /* PokedexViewController.swift */,
+				AEC9C6FF239CBCFD00EB7B7D /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AEC9C6F3239CBCA300EB7B7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEC9C6F6239CBCAA00EB7B7D /* CoreData.framework */,
+				AEC9C6F4239CBCA300EB7B7D /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC9C707239CBDCE00EB7B7D /* grass.jpg in Resources */,
 				AEC9C6C1239CBC5D00EB7B7D /* LaunchScreen.storyboard in Resources */,
 				AEC9C6BE239CBC5D00EB7B7D /* Assets.xcassets in Resources */,
 				AEC9C6BC239CBC5A00EB7B7D /* Main.storyboard in Resources */,
@@ -291,8 +356,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEC9C6B9239CBC5A00EB7B7D /* ViewController.swift in Sources */,
-				AEC9C6B7239CBC5A00EB7B7D /* AppDelegate.swift in Sources */,
+				AEC9C70C239CBED300EB7B7D /* Pack_Go.xcdatamodeld in Sources */,
+				AEC9C709239CBDEA00EB7B7D /* CDHelper.swift in Sources */,
+				AEC9C703239CBCFD00EB7B7D /* ViewController.swift in Sources */,
+				AEC9C70E239CC0B600EB7B7D /* AppDelegate.swift in Sources */,
+				AEC9C705239CBCFD00EB7B7D /* MapKitViewController.swift in Sources */,
+				AEC9C6FC239CBCCC00EB7B7D /* BattleScene.swift in Sources */,
+				AEC9C6FB239CBCCC00EB7B7D /* CustomAnnotation.swift in Sources */,
+				AEC9C702239CBCFD00EB7B7D /* BattleViewController.swift in Sources */,
+				AEC9C704239CBCFD00EB7B7D /* PokedexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +620,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87KX5H48M9;
 				INFOPLIST_FILE = "Pack-Go/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -565,6 +638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 87KX5H48M9;
 				INFOPLIST_FILE = "Pack-Go/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -617,6 +691,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AEC9C70A239CBED300EB7B7D /* Pack_Go.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AEC9C70B239CBED300EB7B7D /* Pack_Go.xcdatamodel */,
+			);
+			currentVersion = AEC9C70B239CBED300EB7B7D /* Pack_Go.xcdatamodel */;
+			path = Pack_Go.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AEC9C6AB239CBC5A00EB7B7D /* Project object */;
 }
