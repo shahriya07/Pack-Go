@@ -9,15 +9,15 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Pack Interface Controller-->
         <scene sceneID="tC1-eo-Yyl">
             <objects>
-                <controller fullScreen="YES" id="XCD-oz-GwJ">
+                <controller fullScreen="YES" id="XCD-oz-GwJ" customClass="PackInterfaceController" customModule="Pack_Go_WatchKit_Extension">
                     <items>
-                        <label width="134" alignment="left" text="My Pokemons" textAlignment="center" id="75H-NL-ckt"/>
+                        <label width="134" alignment="left" text="My Packlads" textAlignment="center" id="75H-NL-ckt"/>
                         <table alignment="left" id="f7s-aZ-ifz">
                             <items>
-                                <tableRow identifier="ProgRowController" id="mHg-k6-55U" customClass="ProgRowController" customModule="W8WatchAppc_WatchKit_Extension">
+                                <tableRow identifier="PackRowController" id="mHg-k6-55U" customClass="PackRowController" customModule="Pack_Go_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="49" alignment="left" layout="vertical" id="LQ1-j1-Obi">
                                         <items>
                                             <group width="1" alignment="left" layout="vertical" id="Gsf-IF-zqx">
@@ -41,6 +41,11 @@
                                             </group>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="imgPack" destination="CuU-sk-Ujo" id="qQp-bE-kbb"/>
+                                        <outlet property="lblName" destination="NIl-cB-rjP" id="Apr-kU-Esd"/>
+                                        <outlet property="lblType" destination="Mm7-Rw-8v7" id="uq2-ve-C2Y"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
@@ -55,7 +60,7 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Pack_Go_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label width="134" alignment="left" text="Pack-Go" textAlignment="center" id="Scm-CD-bcv"/>
-                        <button width="1" alignment="left" title="My Pokemons" id="Qud-72-tx4">
+                        <button width="1" alignment="left" title="My Packlads" id="Qud-72-tx4">
                             <connections>
                                 <segue destination="XCD-oz-GwJ" kind="modal" id="hgf-Ow-mJz"/>
                             </connections>
