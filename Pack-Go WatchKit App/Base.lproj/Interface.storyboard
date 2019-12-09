@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
+        <scene sceneID="tC1-eo-Yyl">
+            <objects>
+                <controller fullScreen="YES" id="XCD-oz-GwJ">
+                    <items>
+                        <label width="134" alignment="left" text="My Pokemons" textAlignment="center" id="75H-NL-ckt"/>
+                        <table alignment="left" id="f7s-aZ-ifz">
+                            <items>
+                                <tableRow identifier="ProgRowController" id="mHg-k6-55U" customClass="ProgRowController" customModule="W8WatchAppc_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="49" alignment="left" layout="vertical" id="LQ1-j1-Obi">
+                                        <items>
+                                            <group width="1" alignment="left" layout="vertical" id="Gsf-IF-zqx">
+                                                <items>
+                                                    <group width="1" alignment="left" id="Fw0-c3-gCG">
+                                                        <items>
+                                                            <group width="52" height="41" alignment="left" id="3sc-WU-HFL">
+                                                                <items>
+                                                                    <imageView alignment="left" id="CuU-sk-Ujo"/>
+                                                                </items>
+                                                            </group>
+                                                            <group width="1" alignment="left" layout="vertical" id="qLN-bw-ToU">
+                                                                <items>
+                                                                    <label width="67" alignment="left" text="Name" id="NIl-cB-rjP"/>
+                                                                    <label alignment="left" text="Type" id="Mm7-Rw-8v7"/>
+                                                                </items>
+                                                            </group>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="716" y="90"/>
+        </scene>
+        <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Pack_Go_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="134" alignment="left" text="Pack-Go" textAlignment="center" id="Scm-CD-bcv"/>
+                        <button width="1" alignment="left" title="My Pokemons" id="Qud-72-tx4">
+                            <connections>
+                                <segue destination="XCD-oz-GwJ" kind="modal" id="hgf-Ow-mJz"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Settings(WIP)" id="1zr-EP-h1R"/>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="408" y="90"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -27,21 +81,21 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="408" y="943"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Pack_Go_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="716" y="943"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Pack_Go_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="716" y="572"/>
         </scene>
     </scenes>
 </document>
