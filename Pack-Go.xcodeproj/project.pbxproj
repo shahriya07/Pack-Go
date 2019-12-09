@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4433F034239EDA7F00FC36BE /* PackRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433F033239EDA7F00FC36BE /* PackRowController.swift */; };
 		4433F037239EDAE300FC36BE /* PackInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433F036239EDAE300FC36BE /* PackInterfaceController.swift */; };
+		4433F039239EE27600FC36BE /* PackLads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433F038239EE27600FC36BE /* PackLads.swift */; };
+		4433F03B239EF9F300FC36BE /* PackLads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433F03A239EF9F300FC36BE /* PackLads.swift */; };
 		AEC9C6BC239CBC5A00EB7B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BA239CBC5A00EB7B7D /* Main.storyboard */; };
 		AEC9C6BE239CBC5D00EB7B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BD239CBC5D00EB7B7D /* Assets.xcassets */; };
 		AEC9C6C1239CBC5D00EB7B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BF239CBC5D00EB7B7D /* LaunchScreen.storyboard */; };
@@ -79,6 +81,8 @@
 /* Begin PBXFileReference section */
 		4433F033239EDA7F00FC36BE /* PackRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackRowController.swift; sourceTree = "<group>"; };
 		4433F036239EDAE300FC36BE /* PackInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackInterfaceController.swift; sourceTree = "<group>"; };
+		4433F038239EE27600FC36BE /* PackLads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackLads.swift; sourceTree = "<group>"; };
+		4433F03A239EF9F300FC36BE /* PackLads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackLads.swift; sourceTree = "<group>"; };
 		AEC9C6B3239CBC5A00EB7B7D /* Pack-Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pack-Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC9C6BB239CBC5A00EB7B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEC9C6BD239CBC5D00EB7B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				AEC9C6D9239CBC5E00EB7B7D /* InterfaceController.swift */,
+				4433F038239EE27600FC36BE /* PackLads.swift */,
 			);
 			path = "Special Classes";
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				AEC9C6F9239CBCCC00EB7B7D /* BattleScene.swift */,
 				AEC9C6F8239CBCCC00EB7B7D /* CustomAnnotation.swift */,
 				AEC9C711239CC49D00EB7B7D /* AppDelegate.swift */,
+				4433F03A239EF9F300FC36BE /* PackLads.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 				AEC9C6FC239CBCCC00EB7B7D /* BattleScene.swift in Sources */,
 				AEC9C6FB239CBCCC00EB7B7D /* CustomAnnotation.swift in Sources */,
 				AEC9C702239CBCFD00EB7B7D /* BattleViewController.swift in Sources */,
+				4433F03B239EF9F300FC36BE /* PackLads.swift in Sources */,
 				AEC9C704239CBCFD00EB7B7D /* PokedexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4433F039239EE27600FC36BE /* PackLads.swift in Sources */,
 				AEC9C6DE239CBC5E00EB7B7D /* NotificationController.swift in Sources */,
 				4433F034239EDA7F00FC36BE /* PackRowController.swift in Sources */,
 				AEC9C6DC239CBC5E00EB7B7D /* ExtensionDelegate.swift in Sources */,
