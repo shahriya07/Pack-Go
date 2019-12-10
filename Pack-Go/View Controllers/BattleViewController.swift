@@ -8,13 +8,18 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class BattleViewController: UIViewController {
     
     var pokemon: Pokemon!
+    
+    var audioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playSound(file: "battle", ext: "mp3")
         
         let scene = BattleScene(size: CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height))
         self.view = SKView()
@@ -32,6 +37,17 @@ class BattleViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.returnToMap), name: NSNotification.Name("closeBattle"), object: nil)
 
         // Do any additional setup after loading the view.
+    }
+    
+    func playSound(file:String, ext:String) -> Void {
+        do {
+            let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: file, ofType: ext)!)
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        } catch let error {
+            NSLog(error.localizedDescription)
+        }
     }
     
     @objc func returnToMap(){

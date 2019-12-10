@@ -8,9 +8,12 @@
 
 import UIKit
 import WatchConnectivity
+import AVFoundation
 
 class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, WCSessionDelegate {
     @IBOutlet var tableView: UITableView!
+    
+    var audioPlayer = AVAudioPlayer()
     
     var caughtPokemon : [Pokemon] = []
     var uncaughtPokemon : [Pokemon] = []
@@ -18,6 +21,8 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playSound(file: "table", ext: "mp3")
         
         if (WCSession.isSupported()) {
             let session = WCSession.default
@@ -47,6 +52,17 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("Uncaught: \(uncaughtPokemon.count)")
 
         // Do any additional setup after loading the view.
+    }
+    
+    func playSound(file:String, ext:String) -> Void {
+        do {
+            let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: file, ofType: ext)!)
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        } catch let error {
+            NSLog(error.localizedDescription)
+        }
     }
     
     @IBAction func backToMap(_ sender: Any) {

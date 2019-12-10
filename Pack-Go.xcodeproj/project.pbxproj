@@ -14,6 +14,8 @@
 		AE4473BE239F71A100D1408D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4473BD239F71A100D1408D /* AVFoundation.framework */; };
 		AE4473C0239F72CC00D1408D /* title.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE4473BF239F72CC00D1408D /* title.mp3 */; };
 		AE4473C2239F738B00D1408D /* map.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE4473C1239F738A00D1408D /* map.mp3 */; };
+		AE4473C4239F748B00D1408D /* battle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE4473C3239F748B00D1408D /* battle.mp3 */; };
+		AE4473C6239F754A00D1408D /* table.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE4473C5239F754900D1408D /* table.mp3 */; };
 		AEC9C6BC239CBC5A00EB7B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BA239CBC5A00EB7B7D /* Main.storyboard */; };
 		AEC9C6BE239CBC5D00EB7B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BD239CBC5D00EB7B7D /* Assets.xcassets */; };
 		AEC9C6C1239CBC5D00EB7B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BF239CBC5D00EB7B7D /* LaunchScreen.storyboard */; };
@@ -89,6 +91,8 @@
 		AE4473BD239F71A100D1408D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE4473BF239F72CC00D1408D /* title.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = title.mp3; sourceTree = "<group>"; };
 		AE4473C1239F738A00D1408D /* map.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = map.mp3; sourceTree = "<group>"; };
+		AE4473C3239F748B00D1408D /* battle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = battle.mp3; sourceTree = "<group>"; };
+		AE4473C5239F754900D1408D /* table.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = table.mp3; sourceTree = "<group>"; };
 		AEC9C6B3239CBC5A00EB7B7D /* Pack-Go.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pack-Go.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC9C6BB239CBC5A00EB7B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEC9C6BD239CBC5D00EB7B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 				AEC9C6C2239CBC5D00EB7B7D /* Info.plist */,
 				AEC9C70A239CBED300EB7B7D /* Pack_Go.xcdatamodeld */,
 				AE4473C1239F738A00D1408D /* map.mp3 */,
+				AE4473C5239F754900D1408D /* table.mp3 */,
+				AE4473C3239F748B00D1408D /* battle.mp3 */,
 				AE4473BF239F72CC00D1408D /* title.mp3 */,
 			);
 			path = "Pack-Go";
@@ -363,12 +369,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4473C4239F748B00D1408D /* battle.mp3 in Resources */,
 				AEC9C707239CBDCE00EB7B7D /* grass.jpg in Resources */,
 				AEC9C6C1239CBC5D00EB7B7D /* LaunchScreen.storyboard in Resources */,
 				AEC9C6BE239CBC5D00EB7B7D /* Assets.xcassets in Resources */,
 				AE4473C2239F738B00D1408D /* map.mp3 in Resources */,
 				AEC9C6BC239CBC5A00EB7B7D /* Main.storyboard in Resources */,
 				AE4473C0239F72CC00D1408D /* title.mp3 in Resources */,
+				AE4473C6239F754A00D1408D /* table.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
