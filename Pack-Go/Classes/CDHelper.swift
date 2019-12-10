@@ -14,7 +14,14 @@ func createAllPokemons(){
     createPokemon(name: "Pikachu", withThe: "pikachu")
     createPokemon(name: "Charmander", withThe: "charmander")
     createPokemon(name: "Bullbasaur", withThe: "bullbasaur")
+    createPokemon(name: "JigglyPuff", withThe: "jiggly")
     createPokemon(name: "Squirtle", withThe: "squirtle")
+    createPokemon(name: "Kadabra", withThe: "kadabra")
+    createPokemon(name: "Snorlax", withThe: "snorlax")
+    createPokemon(name: "Psyduck", withThe: "duck")
+    createPokemon(name: "Eevee", withThe: "eeve")
+    createPokemon(name: "Meowth", withThe: "mewoth")
+    createPokemon(name: "Mewtwo", withThe: "mew")
     
     (UIApplication.shared.delegate as! AppDelegate).saveContext()
     
