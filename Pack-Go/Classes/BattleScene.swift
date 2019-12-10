@@ -29,6 +29,12 @@ class BattleScene: SKScene, SKPhysicsContactDelegate{
     var canThrowPokeball = false
     
     
+    var startCount = true
+    var maxTime = 30
+    var myTime = 30
+    var timeLabel = SKLabelNode(fontNamed: "arial")
+    var pokemonCaught = false
+    
     override func didMove(to view: SKView) {
         let battlebg = SKSpriteNode(imageNamed: "grass")
         battlebg.size = self.size
@@ -39,12 +45,17 @@ class BattleScene: SKScene, SKPhysicsContactDelegate{
         
         self.addChild(battlebg)
         
+        self.makeMessageWith(imageName: "battle")
+        
         self.perform(#selector(pokemonSetup), with: nil, afterDelay: 1.0)
         self.perform(#selector(pokeballSetup), with: nil, afterDelay: 1.0)
         
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
         self.physicsBody?.categoryBitMask = kEdgeCategory
         self.physicsWorld.contactDelegate = self
+        
+        self.timeLabel.position = CGPoint(x: self.size.width/2, y: self.size.height*0.9)
+        self.addChild(self.timeLabel)
     }
     
     @objc func pokemonSetup(){
@@ -122,6 +133,62 @@ class BattleScene: SKScene, SKPhysicsContactDelegate{
         let velocity = CGVector(dx: distance.dx / dt, dy: distance.dy / dt)
         self.pokeball.physicsBody?.velocity = velocity
         
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let contactMask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        switch contactMask {
+        case kPokemonCategory | kPokeballCategory:
+                print("Pokemon has been Captured")
+                self.pokemonCaught = true
+                endGame()
+        default:
+            return
+        }
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        if self.startCount{
+            self.maxTime = Int(currentTime) + self.maxTime
+            self.startCount = false
+        }
+        
+        self.myTime = self.maxTime - Int(currentTime)
+        self.timeLabel.text = "\(self.myTime)"
+        
+        if self.myTime <= 0 {
+            endGame()
+        }
+    }
+    
+    func endGame(){
+        
+        self.pokemonSprite.removeFromParent()
+        self.pokeball.removeFromParent()
+        
+        if pokemonCaught{
+            self.makeMessageWith(imageName: "gotcha")
+            self.pokemon.numberOfTimeCaught += 1
+             (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        }
+        else{
+            self.makeMessageWith(imageName: "footprint")
+        }
+        self.perform(#selector(self.endBattle), with: nil, afterDelay: 1.0)
+    }
+    
+    @objc func endBattle(){
+        NotificationCenter.default.post(name: NSNotification.Name("closeBattle"), object: nil)
+    }
+    
+    func makeMessageWith(imageName: String){
+        let message = SKSpriteNode(imageNamed: imageName)
+        message.size = CGSize(width: 150, height: 150)
+        message.position = CGPoint(x: self.size.width/2, y: self.size.width/2)
+        self.addChild(message)
+        
+        message.run(SKAction.sequence([SKAction.wait(forDuration: 1.0), SKAction.removeFromParent()]))
     }
     
 }

@@ -8,10 +8,13 @@
 
 import UIKit
 import MapKit
+import AVFoundation
 
 class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate  {
     
     @IBOutlet var mapView : MKMapView!
+    
+    var audioPlayer = AVAudioPlayer()
     
     var locationManager = CLLocationManager()
     var pokemons : [Pokemon] = []
@@ -20,14 +23,20 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     //Compass Button
     @IBAction func compassLocationUpdate(_ sender: Any) {
         
-        let region = MKCoordinateRegion(center: self.locationManager.location!.coordinate, latitudinalMeters: 400, longitudinalMeters: 400)
+        if let coordinates = self.locationManager.location?.coordinate{
         
-        self.mapView.setRegion(region, animated: true)
+            let region = MKCoordinateRegion(center: coordinates, latitudinalMeters: 400, longitudinalMeters: 400)
+            self.mapView.setRegion(region, animated: true)
+        }
+        
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playSound(file: "map", ext: "mp3")
 
         // Do any additional setup after loading the view.
         self.locationManager.delegate = self
@@ -35,28 +44,21 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         
         //Location Authorization Status
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
-            self.mapView.delegate = self
-            self.mapView.showsUserLocation = true
-            self.locationManager.startUpdatingLocation()
-            
-            //Placing pokemon
-            Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (timer) in
-                
-                if let coordinates = self.locationManager.location?.coordinate{
-                    
-                    let randomPokemon = Int(arc4random_uniform(UInt32(self.pokemons.count)))
-                    let pokemon = self.pokemons[randomPokemon]
-                    
-                    let annotation = CustomAnnotation(coordinate: coordinates, pokemon: pokemon)
-                    annotation.coordinate.latitude += (Double(arc4random_uniform(1000)) - 500) / 200000.0
-                     annotation.coordinate.longitude += (Double(arc4random_uniform(1000)) - 500) / 200000.0
-                    
-                    self.mapView.addAnnotation(annotation)
-                }
-            }
+            setUpMap()
         }
         else{
             self.locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    func playSound(file:String, ext:String) -> Void {
+        do {
+            let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: file, ofType: ext)!)
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        } catch let error {
+            NSLog(error.localizedDescription)
         }
     }
     
@@ -79,6 +81,29 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
 
     }
     
+    func setUpMap(){
+        
+        self.mapView.delegate = self
+        self.mapView.showsUserLocation = true
+        self.locationManager.startUpdatingLocation()
+        
+        //Placing pokemon
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (timer) in
+            
+            if let coordinates = self.locationManager.location?.coordinate{
+                
+                let randomPokemon = Int(arc4random_uniform(UInt32(self.pokemons.count)))
+                let pokemon = self.pokemons[randomPokemon]
+                
+                let annotation = CustomAnnotation(coordinate: coordinates, pokemon: pokemon)
+                annotation.coordinate.latitude += (Double(arc4random_uniform(1000)) - 500) / 200000.0
+                annotation.coordinate.longitude += (Double(arc4random_uniform(1000)) - 500) / 200000.0
+                
+                self.mapView.addAnnotation(annotation)
+            }
+        }
+    }
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
         mapView.deselectAnnotation(view.annotation!, animated: true)
@@ -98,11 +123,16 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                 let pokemon = (view.annotation as! CustomAnnotation).pokemon
                 
                 battle.pokemon = pokemon
-                
+                self.mapView.removeAnnotation(view.annotation!)
                 self.present(battle, animated: true, completion: nil)
             }
             else{
-                print("tooo far to capture")
+                let alertController = UIAlertController(title: "Too Far!!!", message: "Pokemon is too far!!!", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                
+                alertController.addAction(cancelAction)
+                self.present(alertController, animated: true)
             }
         }
         
@@ -128,6 +158,12 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
             self.locationManager.stopUpdatingLocation()
         }
        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
+            setUpMap()
+        }
     }
     
 

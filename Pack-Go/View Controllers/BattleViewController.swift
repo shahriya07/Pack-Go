@@ -28,8 +28,14 @@ class BattleViewController: UIViewController {
         scene.scaleMode = .aspectFill
         
         skView.presentScene(scene)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.returnToMap), name: NSNotification.Name("closeBattle"), object: nil)
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func returnToMap(){
+        self.dismiss(animated: true, completion: nil)
     }
     
 
