@@ -28,9 +28,14 @@ class LoginViewController: UIViewController {
                 lblInvalidNotification.text = "Invalid username or password"
             } else {
                 if (user.password == txtPassword.text!){
+                    UserDefaults.standard.set(user.username, forKey: "loggedUser")
+                    txtUsername.text = ""
+                    txtPassword.text = ""
                     performSegue(withIdentifier: "loginSegue", sender: nil)
                 } else {
                     lblInvalidNotification.text = "Invalid username or password"
+                    txtUsername.text = ""
+                    txtPassword.text = ""
                 }
             }
         }
@@ -49,5 +54,13 @@ class LoginViewController: UIViewController {
         //ELSE ask user to login with their credentials (do nothing)
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let username = UserDefaults.standard.object(forKey: "loggedUser") ?? ""
+        if ((username as! String).count > 0){
+            performSegue(withIdentifier: "loginSegue", sender: nil)
+        }
+        
     }
 }

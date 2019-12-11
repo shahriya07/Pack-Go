@@ -20,7 +20,7 @@ class RegisterViewController: UIViewController {
         //Validations
         if (txtUsername.text!.count == 0 && txtPassword.text!.count == 0 && txtPasswordRepeat.text!.count == 0){
             lblInvalidNotification.text = "Please provide information about your account"
-        
+
         } else if(txtUsername.text!.count == 0){
             lblInvalidNotification.text = "Please provide a username"
         } else if(txtPassword.text!.count == 0){
@@ -44,7 +44,7 @@ class RegisterViewController: UIViewController {
                     txtUsername.text = ""
                     txtPassword.text = ""
                     txtPasswordRepeat.text = ""
-//                    performSegue(withIdentifier: "unwindSegueToLoginVoiceController", sender: nil)
+//                    performSegue(withIdentifier: "unwindSegueToLoginViewController", sender: nil)
                 } else {
                     lblInvalidNotification.text = "Username already exists!"
                 }

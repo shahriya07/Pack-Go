@@ -210,7 +210,7 @@
                                     <navigationItem title="Register" id="C5w-H6-9Kh">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Gz5-Qd-8X3">
                                             <connections>
-                                                <segue destination="GER-Pm-1pe" kind="unwind" identifier="unwindSegueToLoginVoiceController" unwindAction="unwindToLoginVCWithSender:" id="SQr-oe-TgM"/>
+                                                <segue destination="GER-Pm-1pe" kind="unwind" identifier="unwindSegueToLoginViewController" unwindAction="unwindToLoginVCWithSender:" id="SQr-oe-TgM"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -282,6 +282,15 @@
                                     <action selector="compassLocationUpdate:" destination="Idh-cq-YXN" eventType="touchUpInside" id="Ml7-02-Kuk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDE-tg-d9m">
+                                <rect key="frame" x="31" y="54" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="compass" backgroundImage="compass"/>
+                                <connections>
+                                    <action selector="logoutWithSender:" destination="Idh-cq-YXN" eventType="touchDown" id="zDf-Bv-KP5"/>
+                                    <segue destination="D8S-Uc-y0m" kind="unwind" identifier="unwindSegueToLoginViewController" unwindAction="unwindToLoginVCWithSender:" id="rud-37-eHp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -295,6 +304,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggA-Ox-dBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="D8S-Uc-y0m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1329" y="-185"/>
         </scene>

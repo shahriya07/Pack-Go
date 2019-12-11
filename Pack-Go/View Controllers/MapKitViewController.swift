@@ -29,7 +29,12 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
             self.mapView.setRegion(region, animated: true)
         }
         
-        
+    }
+    
+    @IBAction func logout(sender: Any){
+        UserDefaults.standard.set("", forKey: "loggedUser")
+        performSegue(withIdentifier: "unwindSegueToLoginViewController", sender: nil)
+        audioPlayer.stop()
     }
     
     

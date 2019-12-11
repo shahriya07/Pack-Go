@@ -9,6 +9,10 @@
 import CoreData
 import UIKit
 
+func getUsersCaughtPokemons() {
+    
+}
+
 func getAllUsernames() -> [User]{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     do {
