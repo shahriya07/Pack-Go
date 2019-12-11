@@ -19,20 +19,20 @@ class PackInterfaceController: WKInterfaceController, WCSessionDelegate {
         
     }
 
-
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         
         var replyValues = Dictionary<String, AnyObject>()
-        
-        let loadedData = message["progData"]
-        
-        let loadedPerson = NSKeyedUnarchiver.unarchiveObject(with: loadedData as! Data) as? [PackLads]
-        
-        packLads = loadedPerson!
-        
+
+        let loadedData = message["pokemonData"]
+
+        let loadedPokemon = NSKeyedUnarchiver.unarchiveObject(with: loadedData as! Data) as? [PackLads]
+
+        packLads = loadedPokemon!
+
         replyValues["status"] = "PackLads Received" as AnyObject?
         replyHandler(replyValues)
     }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         if(WCSession.isSupported()){
@@ -53,28 +53,21 @@ class PackInterfaceController: WKInterfaceController, WCSessionDelegate {
     //    }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
         if (WCSession.default.isReachable) {
-            
-            // step 6c - send a message to the phone requesting data
-            let message = ["getProgData": [:]]
+            let message = ["getPokemonData": [:]]
             WCSession.default.sendMessage(message, replyHandler: { (result) -> Void in
-                // TODO: Handle your data from the iPhone
                 
-                if result["progData"] != nil
+                if result["pokemonData"] != nil
                 {
-                    let loadedData = result["progData"]
+                    let loadedData = result["pokemonData"]
                     
+                    NSKeyedUnarchiver.setClass(PackLads.self, forClassName: "PackLads")
                     
-                    // step 6d - deserialize the data from the watch
-                    NSKeyedUnarchiver.setClass(PackLads.self, forClassName: "ProgramObject")
-                    // causes app crash because decode not linked properly error
-                    // above line of code needed to prevent this crash
-                    let loadedPerson = NSKeyedUnarchiver.unarchiveObject(with: loadedData as! Data) as? [PackLads]
+                    let loadedPokemon = NSKeyedUnarchiver.unarchiveObject(with: loadedData as! Data) as? [PackLads]
                     
-                    self.packLads = loadedPerson!
+                    self.packLads = loadedPokemon!
                     
                     self.packladsTable.setNumberOfRows(self.packLads.count,
                                                    withRowType: "PackRowController")
@@ -91,13 +84,8 @@ class PackInterfaceController: WKInterfaceController, WCSessionDelegate {
                     for (index,pack) in self.packLads.enumerated() {
                         let row = self.packladsTable.rowController(at: index) as! PackRowController
                         
-                        row.lblName.setText("")
-                        row.lblType.setText("")
-                        row.imgPack.setImageNamed("menuBackground.jpg")
-//                        row.lblTitle.setText(prog.title)
-//                        row.lblSpeaker.setText(prog.speaker)
-//                        row.lblFrom.setText(prog.from)
-//                        row.lblTo.setText(prog.to)
+                        row.lblName.setText(pack.pokemonName!)
+                        row.imgPack.setImageNamed(pack.imageName!)
                     
                     }
                 }

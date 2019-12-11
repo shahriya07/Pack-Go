@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		4433F034239EDA7F00FC36BE /* PackRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433F033239EDA7F00FC36BE /* PackRowController.swift */; };
 		4433F037239EDAE300FC36BE /* PackInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433F036239EDAE300FC36BE /* PackInterfaceController.swift */; };
-		4433F039239EE27600FC36BE /* PackLads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433F038239EE27600FC36BE /* PackLads.swift */; };
 		4433F03B239EF9F300FC36BE /* PackLads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433F03A239EF9F300FC36BE /* PackLads.swift */; };
+		4454019523A197330088C47F /* PackLads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4433F03A239EF9F300FC36BE /* PackLads.swift */; };
+		4454019623A19F6B0088C47F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEC9C6BD239CBC5D00EB7B7D /* Assets.xcassets */; };
+		44AF751D23A0FC3A00982A89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF751C23A0FC3A00982A89 /* LoginViewController.swift */; };
+		44AF751F23A0FC6E00982A89 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF751E23A0FC6E00982A89 /* RegisterViewController.swift */; };
 		AE4473BE239F71A100D1408D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE4473BD239F71A100D1408D /* AVFoundation.framework */; };
 		AE4473C0239F72CC00D1408D /* title.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE4473BF239F72CC00D1408D /* title.mp3 */; };
 		AE4473C2239F738B00D1408D /* map.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE4473C1239F738A00D1408D /* map.mp3 */; };
@@ -86,8 +89,9 @@
 /* Begin PBXFileReference section */
 		4433F033239EDA7F00FC36BE /* PackRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackRowController.swift; sourceTree = "<group>"; };
 		4433F036239EDAE300FC36BE /* PackInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackInterfaceController.swift; sourceTree = "<group>"; };
-		4433F038239EE27600FC36BE /* PackLads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackLads.swift; sourceTree = "<group>"; };
 		4433F03A239EF9F300FC36BE /* PackLads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackLads.swift; sourceTree = "<group>"; };
+		44AF751C23A0FC3A00982A89 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		44AF751E23A0FC6E00982A89 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE4473BD239F71A100D1408D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE4473BF239F72CC00D1408D /* title.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = title.mp3; sourceTree = "<group>"; };
 		AE4473C1239F738A00D1408D /* map.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = map.mp3; sourceTree = "<group>"; };
@@ -158,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				AEC9C6D9239CBC5E00EB7B7D /* InterfaceController.swift */,
-				4433F038239EE27600FC36BE /* PackLads.swift */,
 			);
 			path = "Special Classes";
 			sourceTree = "<group>";
@@ -253,6 +256,8 @@
 				AEC9C701239CBCFD00EB7B7D /* MapKitViewController.swift */,
 				AEC9C700239CBCFD00EB7B7D /* PokedexViewController.swift */,
 				AEC9C6FF239CBCFD00EB7B7D /* ViewController.swift */,
+				44AF751C23A0FC3A00982A89 /* LoginViewController.swift */,
+				44AF751E23A0FC6E00982A89 /* RegisterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4454019623A19F6B0088C47F /* Assets.xcassets in Resources */,
 				AEC9C6E0239CBC5F00EB7B7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +413,7 @@
 				AEC9C70C239CBED300EB7B7D /* Pack_Go.xcdatamodeld in Sources */,
 				AEC9C709239CBDEA00EB7B7D /* CDHelper.swift in Sources */,
 				AEC9C703239CBCFD00EB7B7D /* ViewController.swift in Sources */,
+				44AF751F23A0FC6E00982A89 /* RegisterViewController.swift in Sources */,
 				AEC9C712239CC49D00EB7B7D /* AppDelegate.swift in Sources */,
 				AEC9C705239CBCFD00EB7B7D /* MapKitViewController.swift in Sources */,
 				AEC9C6FC239CBCCC00EB7B7D /* BattleScene.swift in Sources */,
@@ -414,6 +421,7 @@
 				AEC9C702239CBCFD00EB7B7D /* BattleViewController.swift in Sources */,
 				4433F03B239EF9F300FC36BE /* PackLads.swift in Sources */,
 				AEC9C704239CBCFD00EB7B7D /* PokedexViewController.swift in Sources */,
+				44AF751D23A0FC3A00982A89 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4433F039239EE27600FC36BE /* PackLads.swift in Sources */,
+				4454019523A197330088C47F /* PackLads.swift in Sources */,
 				AEC9C6DE239CBC5E00EB7B7D /* NotificationController.swift in Sources */,
 				4433F034239EDA7F00FC36BE /* PackRowController.swift in Sources */,
 				AEC9C6DC239CBC5E00EB7B7D /* ExtensionDelegate.swift in Sources */,

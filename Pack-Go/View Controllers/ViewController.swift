@@ -17,8 +17,17 @@ class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         playSound(file: "title", ext: "mp3")
+//        insertUser(user: "user", pass: "pass")
+        let users = getAllUsernames()
+        
+        for user in users {
+            if user.username != nil {
+                print(user.username!)
+                print(user.pokemons!.allObjects)
+            }
+        }
+        
         // Do any additional setup after loading the view.
        
     }

@@ -12,6 +12,7 @@ import UIKit
 class BattleScene: SKScene, SKPhysicsContactDelegate{
     
     var pokemon: Pokemon!
+    var loggedInUser: User!
     var pokemonSprite: SKSpriteNode!
     var pokeball: SKSpriteNode!
     
@@ -170,6 +171,10 @@ class BattleScene: SKScene, SKPhysicsContactDelegate{
         if pokemonCaught{
             self.makeMessageWith(imageName: "gotcha")
             self.pokemon.numberOfTimeCaught += 1
+            
+            self.loggedInUser.addToPokemons(self.pokemon!)
+            // modify user to have pokemons in user.pokemons
+            
              (UIApplication.shared.delegate as! AppDelegate).saveContext()
         }
         else{
