@@ -38,7 +38,7 @@ class BattleScene: SKScene, SKPhysicsContactDelegate{
     override func didMove(to view: SKView) {
         let battlebg = SKSpriteNode(imageNamed: "grass")
         battlebg.size = self.size
-        battlebg.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+        battlebg.position = CGPoint(x: self.size.width/2.2, y: self.size.height/2)
         battlebg.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         battlebg.zPosition = -1
         
