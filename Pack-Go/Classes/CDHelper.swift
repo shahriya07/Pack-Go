@@ -9,6 +9,59 @@
 import CoreData
 import UIKit
 
+func getAllUsernames() -> [User]{
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    do {
+        let user = try context.fetch(User.fetchRequest()) as! [User]
+        if user.count == 0 {
+            return []
+        } else {
+            return user
+        }
+    } catch {
+        return []
+    }
+}
+
+func getUserLoginInformation(username: String, password: String) -> User {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let user = User(context: context)
+    user.username = nil
+
+    let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+    userFetch.predicate = NSPredicate(format: "username == %@", username)
+    
+    do {
+        let users = try  context.fetch(userFetch) as! [User]
+
+        if users.count == 0{
+            return user
+        } else {
+            return users[0]
+        }
+
+    } catch {
+        return user
+    }
+
+}
+
+func insertUser(user: String, pass: String){
+    createUser(username: user, password: pass)
+    
+    (UIApplication.shared.delegate as! AppDelegate).saveContext()
+}
+
+func createUser(username: String, password: String) {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    let user = User(context: context)
+    user.username = username
+    user.password = password
+    user.score = 0
+    
+}
+
 func createAllPokemons(){
     
     createPokemon(name: "Pikachu", withThe: "pikachu")

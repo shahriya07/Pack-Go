@@ -9,5 +9,6 @@
 import UIKit
 
 class PackLads: NSObject {
-
+        // PackLads will be the "Pokemon" of the app lol
+    
 }
