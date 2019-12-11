@@ -13,6 +13,7 @@ import AVFoundation
 class BattleViewController: UIViewController {
     
     var pokemon: Pokemon!
+    var user: User!
     
     var audioPlayer = AVAudioPlayer()
 
@@ -20,6 +21,9 @@ class BattleViewController: UIViewController {
         super.viewDidLoad()
         
         playSound(file: "battle", ext: "mp3")
+        
+        let username = UserDefaults.standard.object(forKey: "loggedUser") ?? ""
+        user = getUserLoginInformation(username: username as! String, password: "")
         
         let scene = BattleScene(size: CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height))
         self.view = SKView()
@@ -29,6 +33,7 @@ class BattleViewController: UIViewController {
         skView.showsNodeCount = false
         skView.ignoresSiblingOrder = false
         
+        scene.loggedInUser = self.user 
         scene.pokemon = self.pokemon
         scene.scaleMode = .aspectFill
         

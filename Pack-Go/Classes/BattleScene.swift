@@ -172,6 +172,7 @@ class BattleScene: SKScene, SKPhysicsContactDelegate{
             self.makeMessageWith(imageName: "gotcha")
             self.pokemon.numberOfTimeCaught += 1
             
+            self.loggedInUser.addToPokemons(self.pokemon!)
             // modify user to have pokemons in user.pokemons
             
              (UIApplication.shared.delegate as! AppDelegate).saveContext()

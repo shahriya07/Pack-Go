@@ -48,19 +48,16 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lblInvalidNotification.text = ""
-        // NOT PRIORITY ***
-        //IF Account is already logged in, performSegue to next page
-//        let user = getUserLoginInformation(username: "usernameAlreadyLoggedIn", password: "optional?")
-        //ELSE ask user to login with their credentials (do nothing)
-        
-        // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         let username = UserDefaults.standard.object(forKey: "loggedUser") ?? ""
         if ((username as! String).count > 0){
             performSegue(withIdentifier: "loginSegue", sender: nil)
         }
-        
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//    }
+    
 }

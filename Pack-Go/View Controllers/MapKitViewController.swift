@@ -62,6 +62,7 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            audioPlayer.numberOfLoops = -1
         } catch let error {
             NSLog(error.localizedDescription)
         }
@@ -93,7 +94,7 @@ class MapKitViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         self.locationManager.startUpdatingLocation()
         
         //Placing pokemon
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { (timer) in
             
             if let coordinates = self.locationManager.location?.coordinate{
                 

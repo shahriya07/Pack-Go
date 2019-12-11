@@ -31,7 +31,7 @@ class RegisterViewController: UIViewController {
             if(txtPassword.text! != txtPasswordRepeat.text!){
                 lblInvalidNotification.text = "Password does not match"
             } else {
-                // if input is valid do...
+                // if input is valid do... password parameter does nothing, for now...
                 let newUser = getUserLoginInformation(username: txtUsername.text!, password: txtPassword.text!)
                 // check if username is already registered
                 if(newUser.username == nil) {

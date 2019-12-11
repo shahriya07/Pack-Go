@@ -227,7 +227,7 @@
                                 <rect key="frame" x="162" y="464" width="91" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2775510037979676" green="0.31459624735914704" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Submit">
+                                <state key="normal" title="Sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -283,9 +283,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDE-tg-d9m">
-                                <rect key="frame" x="31" y="54" width="50" height="50"/>
+                                <rect key="frame" x="20" y="54" width="76" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="compass" backgroundImage="compass"/>
+                                <color key="backgroundColor" red="0.43287472205395305" green="0.77903228433135918" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutWithSender:" destination="Idh-cq-YXN" eventType="touchDown" id="zDf-Bv-KP5"/>
                                     <segue destination="D8S-Uc-y0m" kind="unwind" identifier="unwindSegueToLoginViewController" unwindAction="unwindToLoginVCWithSender:" id="rud-37-eHp"/>
@@ -306,7 +308,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggA-Ox-dBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="D8S-Uc-y0m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="-185"/>
+            <point key="canvasLocation" x="1328.985507246377" y="-185.49107142857142"/>
         </scene>
         <!--Pokedex View Controller-->
         <scene sceneID="Xy7-uX-VZk">

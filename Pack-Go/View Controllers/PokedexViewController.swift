@@ -41,9 +41,10 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         initFakeDetails()
         
+        let username = UserDefaults.standard.object(forKey: "loggedUser") ?? ""
         
-        caughtPokemon = getCaughtPokemon()
-        uncaughtPokemon = getUncaughtPokemon()
+        caughtPokemon = getUsersCaughtPokemons(username: username as! String)
+        uncaughtPokemon = getUsersUncaughtPokemons(username: username as! String)
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -60,6 +61,7 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            audioPlayer.numberOfLoops = 10
         } catch let error {
             NSLog(error.localizedDescription)
         }
@@ -68,6 +70,7 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func backToMap(_ sender: Any) {
         
         //Back to mapkit
+        self.audioPlayer.stop()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -151,6 +154,8 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
 //
     }
     
+    
+    
     // step 7 - implemente the watch connectivity delegate interface and methods
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
@@ -182,6 +187,4 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
             replyHandler(replyValues)
         }
     }
-    
-
 }
