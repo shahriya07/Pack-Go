@@ -59,6 +59,7 @@ func createUser(username: String, password: String) {
     user.username = username
     user.password = password
     user.score = 0
+    user.addToPokemons([])
     
 }
 

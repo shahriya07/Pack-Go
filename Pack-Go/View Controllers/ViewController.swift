@@ -24,6 +24,7 @@ class ViewController: UIViewController{
         for user in users {
             if user.username != nil {
                 print(user.username!)
+                print(user.pokemons!.allObjects)
             }
         }
         
