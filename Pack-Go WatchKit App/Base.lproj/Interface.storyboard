@@ -24,15 +24,15 @@
                                                 <items>
                                                     <group width="1" alignment="left" id="Fw0-c3-gCG">
                                                         <items>
-                                                            <group width="52" height="41" alignment="left" id="3sc-WU-HFL">
+                                                            <group width="40" height="41" alignment="left" id="3sc-WU-HFL">
                                                                 <items>
                                                                     <imageView alignment="left" id="CuU-sk-Ujo"/>
                                                                 </items>
                                                             </group>
                                                             <group width="1" alignment="left" layout="vertical" id="qLN-bw-ToU">
                                                                 <items>
-                                                                    <label width="67" alignment="left" text="Name" id="NIl-cB-rjP"/>
-                                                                    <label alignment="left" text="Type" id="Mm7-Rw-8v7"/>
+                                                                    <label width="85" alignment="left" text="Name" id="NIl-cB-rjP"/>
+                                                                    <label alignment="left" id="Mm7-Rw-8v7"/>
                                                                 </items>
                                                             </group>
                                                         </items>
@@ -50,6 +50,9 @@
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="packladsTable" destination="f7s-aZ-ifz" id="hEX-hF-Xj1"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="716" y="90"/>
