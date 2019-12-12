@@ -68,7 +68,6 @@
                                 <segue destination="XCD-oz-GwJ" kind="modal" id="hgf-Ow-mJz"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Settings(WIP)" id="1zr-EP-h1R"/>
                     </items>
                 </controller>
             </objects>
