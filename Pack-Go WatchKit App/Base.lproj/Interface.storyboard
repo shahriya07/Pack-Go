@@ -14,7 +14,7 @@
             <objects>
                 <controller fullScreen="YES" id="XCD-oz-GwJ" customClass="PackInterfaceController" customModule="Pack_Go_WatchKit_Extension">
                     <items>
-                        <label width="134" alignment="left" text="My Packlads" textAlignment="center" id="75H-NL-ckt"/>
+                        <label width="127" height="21" alignment="left" text="My Packlads" textAlignment="center" id="75H-NL-ckt"/>
                         <table alignment="left" id="f7s-aZ-ifz">
                             <items>
                                 <tableRow identifier="PackRowController" id="mHg-k6-55U" customClass="PackRowController" customModule="Pack_Go_WatchKit_Extension">
@@ -24,12 +24,12 @@
                                                 <items>
                                                     <group width="1" alignment="left" id="Fw0-c3-gCG">
                                                         <items>
-                                                            <group width="40" height="41" alignment="left" id="3sc-WU-HFL">
+                                                            <group width="43" height="51" alignment="left" id="3sc-WU-HFL">
                                                                 <items>
-                                                                    <imageView alignment="left" id="CuU-sk-Ujo"/>
+                                                                    <imageView height="48" alignment="left" id="CuU-sk-Ujo"/>
                                                                 </items>
                                                             </group>
-                                                            <label width="85" alignment="left" text="Name" id="NIl-cB-rjP"/>
+                                                            <label width="85" height="49" alignment="left" text="Name" textAlignment="center" id="NIl-cB-rjP"/>
                                                             <group width="1" alignment="left" layout="vertical" id="qLN-bw-ToU">
                                                                 <items>
                                                                     <label alignment="left" id="Mm7-Rw-8v7"/>
