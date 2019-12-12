@@ -29,9 +29,9 @@
                                                                     <imageView alignment="left" id="CuU-sk-Ujo"/>
                                                                 </items>
                                                             </group>
+                                                            <label width="85" alignment="left" text="Name" id="NIl-cB-rjP"/>
                                                             <group width="1" alignment="left" layout="vertical" id="qLN-bw-ToU">
                                                                 <items>
-                                                                    <label width="85" alignment="left" text="Name" id="NIl-cB-rjP"/>
                                                                     <label alignment="left" id="Mm7-Rw-8v7"/>
                                                                 </items>
                                                             </group>

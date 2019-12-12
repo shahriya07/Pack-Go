@@ -106,6 +106,7 @@ class PokedexViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.textLabel?.text = pokemon.pokemonName
         cell.imageView?.image = UIImage(named: pokemon.imageName!)
         
+        
         return cell
     }
     
